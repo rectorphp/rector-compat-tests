@@ -14,13 +14,13 @@ jobs:
                 actions:
                     -
                         name: 'Along PHPUnit 10'
-                        run: composer require "phpunit/phpunit:10.*"
+                        run: composer require "phpunit/phpunit:10.*" -W
                     -
                         name: 'Along PHPUnit 11'
-                        run: composer require "phpunit/phpunit:11.*"
+                        run: composer require "phpunit/phpunit:11.*" -W
                     -
                         name: 'Along PHPUnit 12'
-                        run: composer require "phpunit/phpunit:12.*"
+                        run: composer require "phpunit/phpunit:12.*" -W
 
         name: ${{ matrix.actions.name }}
 
