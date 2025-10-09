@@ -16,6 +16,8 @@ use PHPStan\Rules\RuleErrorBuilder;
  */
 final class CustomPHPStanRule implements Rule
 {
+    public const ERROR_MESSAGE = 'Class "%s" is not final.';
+
     public function getNodeType(): string
     {
         return Class_::class;
@@ -32,7 +34,7 @@ final class CustomPHPStanRule implements Rule
         }
 
         $ruleErrorMessage = RuleErrorBuilder::message(
-            sprintf('Class "%s" is not final.', $node->name->toString())
+            sprintf(self::ERROR_MESSAGE, $node->name->toString())
         )->build();
 
         return [$ruleErrorMessage];
