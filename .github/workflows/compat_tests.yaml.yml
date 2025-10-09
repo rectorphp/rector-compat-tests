@@ -39,10 +39,10 @@ jobs:
                     coverage: none
 
             -   uses: "ramsey/composer-install@v2"
-
             -   run: ${{ matrix.actions.run }}
 
             -   run: vendor/bin/phpunit tests/PHPStan
+
             -   run: vendor/bin/phpunit tests/Rector
 
             -   run: vendor/bin/phpunit
