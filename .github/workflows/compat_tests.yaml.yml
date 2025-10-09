@@ -29,11 +29,11 @@ jobs:
                         run: composer require "phpunit/phpunit:11.*" "rector/rector:dev-main" -W
                         php: 8.2
                     -
-                        name: 'Rector stable PHPUnit 12'
+                        name: 'Rector stable + PHPUnit 12'
                         run: composer require "phpunit/phpunit:12.*" "rector/rector:^2.2" -W
                         php: 8.3
                     -
-                        name: 'Rector dev PHPUnit 12'
+                        name: 'Rector dev + PHPUnit 12'
                         run: composer require "phpunit/phpunit:12.*" "rector/rector:dev-main" -W
                         php: 8.3
 
