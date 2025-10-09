@@ -42,5 +42,7 @@ jobs:
 
             -   run: ${{ matrix.actions.run }}
 
-            # run all tests
+            -   run: vendor/bin/phpunit tests/PHPStan
+            -   run: vendor/bin/phpunit tests/Rector
+
             -   run: vendor/bin/phpunit
