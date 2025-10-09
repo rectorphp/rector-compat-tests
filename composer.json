@@ -1,0 +1,20 @@
+{
+    "name": "rector/rector-compat-tests",
+    "description": "Tests for compatibility with PHPStand and PHPUnit preload magic",
+    "require-dev": {
+        "php": "^8.2",
+        "phpunit/phpunit": "^9.6|^10.*|^11.*|^12.*",
+        "rector/rector": "^2.2",
+        "phpstan/phpstan": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rector\\RectorCompatTests\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rector\\RectorCompatTests\\Tests\\": "tests"
+        }
+    }
+}
