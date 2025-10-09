@@ -13,9 +13,6 @@ jobs:
             matrix:
                 actions:
                     -
-                        name: 'Along PHPUnit 9'
-                        run: composer require "phpunit/phpunit:9.*"
-                    -
                         name: 'Along PHPUnit 10'
                         run: composer require "phpunit/phpunit:10.*"
                     -
