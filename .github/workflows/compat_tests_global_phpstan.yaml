@@ -1,4 +1,4 @@
-name: Compat Tests for global install
+name: Compat Tests for global install for PHPStan
 
 on:
     pull_request: null
@@ -45,7 +45,5 @@ jobs:
             -   run: ${{ matrix.actions.run }}
 
             -   run: phpunit tests/PHPStan
-
-            -   run: phpunit tests/Rector
 
             -   run: phpunit

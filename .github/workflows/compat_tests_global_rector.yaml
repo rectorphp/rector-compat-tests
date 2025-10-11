@@ -1,0 +1,49 @@
+name: Compat Tests for global install for Rector
+
+on:
+    pull_request: null
+    push:
+        branches:
+            - main
+
+jobs:
+    compat_tests:
+        strategy:
+            fail-fast: false
+            matrix:
+                actions:
+                    -
+                        name: 'Rector stable + PHPUnit 12 global install'
+                        run: |
+                            composer remove --dev phpunit/phpunit -W
+                            composer global require --dev "phpunit/phpunit:12.*" -W
+                            composer require --dev "rector/rector:^2.2" -W
+                        php: 8.3
+
+                    -
+                        name: 'Rector dev + PHPUnit 12 global install'
+                        run: |
+                            composer remove --dev phpunit/phpunit -W
+                            composer global require --dev "phpunit/phpunit:12.*" -W
+                            composer require --dev "rector/rector:dev-main" -W
+                        php: 8.3
+
+        name: ${{ matrix.actions.name }}
+
+        runs-on: ubuntu-latest
+
+        steps:
+            -   uses: actions/checkout@v4
+
+            -
+                uses: shivammathur/setup-php@v2
+                with:
+                    php-version: ${{ matrix.actions.php }}
+                    coverage: none
+
+            -   uses: "ramsey/composer-install@v2"
+            -   run: ${{ matrix.actions.run }}
+
+            -   run: phpunit tests/Rector
+
+            -   run: phpunit
