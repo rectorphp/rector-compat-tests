@@ -8,7 +8,8 @@
 >
     <testsuites>
         <testsuite name="Project Tests">
-            <directory>tests</directory>
+            <directory>tests/Rector</directory>
+            <directory>tests/PHPStan</directory>
         </testsuite>
     </testsuites>
 </phpunit>
