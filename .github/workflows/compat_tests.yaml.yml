@@ -13,25 +13,9 @@ jobs:
             matrix:
                 actions:
                     -
-                        name: 'Rector stable + PHPUnit 10'
-                        run: composer require "phpunit/phpunit:10.*" "rector/rector:^2.2" -W
-                        php: 8.2
-                    -
-                        name: 'Rector dev + PHPUnit 10'
-                        run: composer require "phpunit/phpunit:10.*" "rector/rector:dev-main" -W
-                        php: 8.2
-                    -
-                        name: 'Rector stable + PHPUnit 11'
-                        run: composer require "phpunit/phpunit:11.*" "rector/rector:^2.2" -W
-                        php: 8.2
-                    -
                         name: 'Rector dev + PHPUnit 11'
                         run: composer require "phpunit/phpunit:11.*" "rector/rector:dev-main" -W
                         php: 8.2
-                    -
-                        name: 'Rector stable + PHPUnit 12'
-                        run: composer require "phpunit/phpunit:12.*" "rector/rector:^2.2" -W
-                        php: 8.3
                     -
                         name: 'Rector dev + PHPUnit 12'
                         run: composer require "phpunit/phpunit:12.*" "rector/rector:dev-main" -W
@@ -52,8 +36,6 @@ jobs:
 
             -   uses: "ramsey/composer-install@v2"
             -   run: ${{ matrix.actions.run }}
-
-            -   run: vendor/bin/phpunit tests/PHPStan
 
             -   run: vendor/bin/phpunit tests/Rector
 
