@@ -42,6 +42,6 @@ jobs:
 
             -   run: ${{ matrix.actions.run }}
 
-            -   run: phpunit tests/Rector
+            -   run: /home/runner/.composer/vendor/bin/phpunit tests/Rector
 
-            -   run: phpunit
+            -   run: /home/runner/.composer/vendor/bin/phpunit
