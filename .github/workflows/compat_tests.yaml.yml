@@ -39,6 +39,7 @@ jobs:
                     -
                         name: 'Rector dev + PHPUnit 12 global install'
                         run: |
+                            composer remove phpunit/phpunit -W
                             composer global require --dev "phpunit/phpunit:12.*" -W
                             composer require --dev "rector/rector:dev-main" -W
                         php: 8.3
