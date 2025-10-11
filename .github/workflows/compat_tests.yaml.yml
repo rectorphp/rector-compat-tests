@@ -14,11 +14,11 @@ jobs:
                 actions:
                     -
                         name: 'Rector dev + PHPUnit 11'
-                        run: composer require "phpunit/phpunit:11.*" "rector/rector:dev-main" -W
+                        run: composer require "phpunit/phpunit:11.*" -W
                         php: 8.2
                     -
                         name: 'Rector dev + PHPUnit 12'
-                        run: composer require "phpunit/phpunit:12.*" "rector/rector:dev-main" -W
+                        run: composer require "phpunit/phpunit:12.*" -W
                         php: 8.3
 
         name: ${{ matrix.actions.name }}

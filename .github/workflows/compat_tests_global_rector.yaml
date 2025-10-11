@@ -1,4 +1,4 @@
-name: Compat Tests for global install for Rector
+name: PHPUnit installed globally
 
 on:
     pull_request: null
