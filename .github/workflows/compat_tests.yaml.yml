@@ -55,6 +55,8 @@ jobs:
 
             -   run: vendor/bin/phpunit tests/PHPStan
 
+            -   run: vendor/bin/phpunit tests/PHPStan --config phpunit_custom_bootstrap.xml
+
             -   run: vendor/bin/phpunit tests/Rector
 
             -   run: vendor/bin/phpunit
