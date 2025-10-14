@@ -13,8 +13,8 @@ jobs:
             matrix:
                 actions:
                     -
-                        name: 'Rector dev + PHPUnit 10'
-                        run: composer require "phpunit/phpunit:10.*" "nikic/php-parser:4.10.0" -W
+                        name: 'Rector dev + PHPUnit 8'
+                        run: composer require "phpunit/phpunit:8.*" "nikic/php-parser:4.10.0" -W
                         php: 8.2
                     -
                         name: 'Rector dev + PHPUnit 11'
