@@ -10,7 +10,7 @@ final class UsePHPParser4Test extends TestCase
     public function test(): void
     {
         if ((int) Version::id() >= 11) {
-            $this->markTestSkipped('Only for PHPUnit 11+');
+            $this->markTestSkipped('Only for PHPUnit < 11');
         }
 
         // this uses nikic/php-parser v4 parser
