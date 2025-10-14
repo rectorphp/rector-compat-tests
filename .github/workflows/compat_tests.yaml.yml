@@ -13,6 +13,10 @@ jobs:
             matrix:
                 actions:
                     -
+                        name: 'Rector dev + PHPUnit 10'
+                        run: composer require "phpunit/phpunit:10.*" -W
+                        php: 8.2
+                    -
                         name: 'Rector dev + PHPUnit 11'
                         run: composer require "phpunit/phpunit:11.*" -W
                         php: 8.2
