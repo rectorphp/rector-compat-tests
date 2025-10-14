@@ -3,7 +3,6 @@
     "description": "Tests for compatibility with PHPStand and PHPUnit preload magic",
     "require-dev": {
         "php": "^8.2",
-        "phpunit/phpunit": "10.*|11.*|12.*",
         "rector/rector": "dev-main",
         "phpstan/phpstan": "^2.1"
     },
@@ -16,5 +15,8 @@
         "psr-4": {
             "Rector\\RectorCompatTests\\Tests\\": "tests"
         }
+    },
+    "require": {
+        "phpunit/phpunit": "10.*"
     }
 }
