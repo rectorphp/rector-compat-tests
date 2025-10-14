@@ -1,6 +1,6 @@
 <?php
 
-namespace Rector\RectorCompatTests\Tests\Rector\MakeClassFinalRector;
+namespace Rector\RectorCompatTests\Tests;
 
 use PHPUnit\Framework\TestCase;
 use PHPUnit\Runner\Version;
