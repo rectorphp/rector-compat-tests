@@ -4,6 +4,7 @@
     "require-dev": {
         "php": "^8.2",
         "phpunit/phpunit": "10.*|11.*|12.*",
+        "nikic/php-parser": "5.4.*",
         "rector/rector": "dev-main",
         "phpstan/phpstan": "^2.1"
     },
