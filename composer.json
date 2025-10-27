@@ -4,8 +4,10 @@
     "require-dev": {
         "php": "^8.2",
         "phpunit/phpunit": "10.*|11.*|12.*",
-        "rector/rector": "dev-main",
-        "phpstan/phpstan": "^2.1"
+        "nikic/php-parser": "5.4.*",
+        "rector/rector": "dev-main as 2.2.6",
+        "phpstan/phpstan": "2.1.*",
+        "driftingly/rector-laravel": "^2.1"
     },
     "autoload": {
         "psr-4": {
@@ -14,7 +16,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Rector\\RectorCompatTests\\Tests\\": "tests"
+            "Rector\\RectorCompatTests\\Tests\\": "tests",
+            "Fixture\\": "fixture"
         }
     }
 }
