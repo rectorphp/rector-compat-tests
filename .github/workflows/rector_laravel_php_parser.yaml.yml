@@ -1,0 +1,27 @@
+# see https://github.com/rectorphp/rector/issues/9470#issuecomment-3453388719
+name: Rector Laravel and PHP Parser
+
+on:
+    pull_request: null
+    push:
+        branches:
+            - main
+
+jobs:
+    compat_tests:
+        runs-on: ubuntu-latest
+
+        steps:
+            -   uses: actions/checkout@v4
+
+            -
+                uses: shivammathur/setup-php@v2
+                with:
+                    php-version: "8.1"
+                    coverage: none
+
+            -   uses: "ramsey/composer-install@v2"
+
+            -   run: composer require "phpunit/phpunit:11.*" -W
+
+            -   run: vendor/bin/rector p fixture --debug --clear-cache

@@ -6,7 +6,8 @@
         "phpunit/phpunit": "10.*|11.*|12.*",
         "nikic/php-parser": "5.4.*",
         "rector/rector": "dev-main",
-        "phpstan/phpstan": "^2.1"
+        "phpstan/phpstan": "2.1.*",
+        "driftingly/rector-laravel": "^0.27.0"
     },
     "autoload": {
         "psr-4": {
@@ -15,7 +16,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Rector\\RectorCompatTests\\Tests\\": "tests"
+            "Rector\\RectorCompatTests\\Tests\\": "tests",
+            "Fixture\\": "fixture"
         }
     }
 }
