@@ -6,7 +6,9 @@ namespace Rector\RectorCompatTests\Rector;
 
 use PhpParser\Modifiers;
 use PhpParser\Node;
+use PhpParser\Node\Arg;
 use PhpParser\Node\Expr\FuncCall;
+use PhpParser\Node\Scalar\String_;
 use PhpParser\Node\Stmt\Class_;
 use PhpParser\Node\Stmt\Function_;
 use Rector\Rector\AbstractRector;
@@ -27,7 +29,13 @@ final class UseGetArgRector extends AbstractRector
     public function refactor(Node $node)
     {
         // here we should load Rector's php-parser 5.6, that already has getArg() method
+        $firstArg = $node->getArg('', 0);
+        if (! $firstArg instanceof Arg) {
+            return null;;
+        }
 
-        return $node->getArg('name', 5);
+        $firstArg->value = new String_('changed_value');
+
+        return $node;
     }
 }
